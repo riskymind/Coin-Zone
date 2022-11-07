@@ -1,4 +1,4 @@
-package com.asterisk.cryptocurrencyapp.ui.theme
+package com.asterisk.cryptocurrencyapp.presentation.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
