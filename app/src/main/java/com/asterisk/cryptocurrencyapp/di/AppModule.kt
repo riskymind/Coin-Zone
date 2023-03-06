@@ -6,6 +6,7 @@ import com.asterisk.cryptocurrencyapp.common.Constants.BASE_URL
 import com.asterisk.cryptocurrencyapp.data.remote.CoinPaprikaApi
 import com.asterisk.cryptocurrencyapp.data.repository.CoinRepositoryImpl
 import com.asterisk.cryptocurrencyapp.domain.repository.CoinRepository
+import com.asterisk.cryptocurrencyapp.domain.use_cases.get_coins.GetCoinsUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -73,5 +74,11 @@ object AppModule {
     @Singleton
     fun provideCoinRepository(coinPaprikaApi: CoinPaprikaApi): CoinRepository {
         return CoinRepositoryImpl(coinPaprikaApi)
+    }
+
+    @Provides
+    @Singleton
+    fun provideGetCoinsUseCase(coinRepository: CoinRepository): GetCoinsUseCase {
+        return GetCoinsUseCase(coinRepository)
     }
 }
