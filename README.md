@@ -5,8 +5,9 @@ An application to display current crypto currencies and their ratings
 - 100% kotlin
 - Jetpack Compose
 - Retrofit
-- Gagger Hilt (DI)
+- Dagger Hilt (DI)
 - Flow
+- Accompanist
 
 #Code Architecture
 - MVVM
